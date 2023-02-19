@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <title>
+        KN Chat Bot
+    </title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <a>Khoa Chat Bot</a>
+        <br>
+        <hr>
+        <a href="/new">New Chat + </a>
+        <hr>
+        <!-- <a href="#">Source Code</a>
+        <hr> -->
+        <a href="https://www.khoawack.com">Portfolio</a>
+        <hr>
+        <a href="https://www.linkedin.com/in/khoanguyen07/">Linkedin</a>
+        <hr>
+        <a href="https://github.com/khoawack">Github</a>
+        <hr>
+      </div>
+
+      <div class="chat">
+        <table class="chat">
+          <tbody>
+            {% for messages in message_list %}
+            <tr class="question1">
+              <td>{{ messages.message }}</td>
+              <td><a href='/delete/{{messages.task_id}}'>Delete</a></td>
+            </tr>
+            <tr class="answer1">
+              <td>{{ messages.answer }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <form action="{{url_for('chatting')}}" method="post">
+            <input class="text_input" type ="text" placeholder="Ask something about me" name = "question" required = "required">
+            <input class="button-21" type ="submit" value = ">" id = "test">
+        </form>
+
+        <div>
+            <p class ="credit">
+                Made By Khoa
+            </p>
+        </div>
+
+</body>
+
+</html>
