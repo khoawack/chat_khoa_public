@@ -1,3 +1,6 @@
+# [Link to website](https://khoachatbot.onrender.com/)
+(Hosted with render)  
+
 # chat_khoa
 Khoa Nguyen chatbot using Open AI api 
 
