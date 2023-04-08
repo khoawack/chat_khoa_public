@@ -8,4 +8,3 @@ Khoa Nguyen chatbot using Open AI api
 
 ![alt text](https://github.com/khoawack/chat_khoa_public/blob/main/screenshots/Capture.png)
 ![alt text](https://github.com/khoawack/chat_khoa_public/blob/main/screenshots/Capture2.png)
-![alt text](https://github.com/khoawack/chat_khoa_public/blob/main/screenshots/Capture3.png)
