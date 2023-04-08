@@ -5,7 +5,11 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: #172f67;
+    background-color: #000000;
+}
+
+.header-box{
+    padding-left: 20px;
 }
 
 input {
@@ -27,14 +31,14 @@ input {
 
 
 .sidebar {
-	height: 100%;
-	width: 20%;
+  background: rgb(255, 255, 255);
+  min-width: 20%;
+  height: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-color: #1c2446;
 	overflow-x: hidden;
-	padding-top: 20px;
+	padding-top: 0px;
   }
 
   /* Style the links inside the sidebar */
@@ -44,7 +48,7 @@ input {
 	display: flex;
 	font-size: 20px;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #ffffff;
+	color: #000000;
 	display: block;
   }
 
@@ -88,7 +92,6 @@ input {
   align-items: center;
   appearance: none;
   background-color: #3EB2FD;
-  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
   background-size: calc(100% + 20px) calc(100% + 20px);
   border-radius: 100px;
   border-width: 0;
@@ -129,20 +132,32 @@ input {
 	color: white;
 	font-size: 25px;
 	font-family: 'Courier New', Courier, monospace;
-	position: absolute;
+	position: fixed;
 	top: 2%;
-	left: 13.5%;
+	left: 24vw;
 	width: 85%;
 	height: 85%;
   }
+
+.chat tbody{
+  width: 80%;
+}
   
-  .chat .question1 td {
-	color: rgb(255, 255, 0);
-  }
+.chat .question1 .question-text {
+  color: #3EB2FD;
+  width: 100%;
+}   
+
+
+
+.chat .question1 .delete-btn a{
+  text-decoration: none;
+  color: white;
+}
   
-  .chat .answer1 td {
-	color: rgb(255, 255, 255);
-  }
+.chat .answer1 td {
+	color: white;
+}
 
 .credit {
 	position: absolute;
@@ -155,7 +170,7 @@ input {
 .chat tbody {
     display: block;
     overflow-y: scroll;
-	width: 100%;
+	  width: 85%;
     height: 100%; /* adjust to the desired height */
 }
 
@@ -165,4 +180,59 @@ input {
 
 .chat td {
     padding: 10px;
+}
+
+.sidebar li.active a{
+  color: rgb(0, 0, 0);
+  font-family: Helvetica;
+  font-size: 1.1vw;
+}
+
+.sidebar li.active .new-chat{
+  border: solid;
+  padding: 10px;
+  border-color: #3EB2FD;
+  border-radius: 10px;
+}
+
+
+.sidebar li.active a:hover{
+  color: rgb(0, 0, 0);
+  background-color: #b0dcf9ab;
+}
+
+
+.sidebar li.items a{
+  color: rgb(0, 0, 0);
+  font-family: Helvetica;
+  padding: 10px;
+  font-size: 1.1vw;
+  left: -10px;
+}
+
+.sidebar ul{
+  list-style-type: none;
+}
+
+.sidebar li.items a:hover{
+  color: rgb(173, 173, 173);
+}
+
+.header-box .chat-title{ 
+  font-family: Helvetica;
+  padding-left: 8px;
+  font-size: 1.7vw;
+}
+
+.header-box .robot{ 
+  font-size: 1.8vw;
+  padding: 4px 10px;
+  background: black;
+  color: white;
+  border-radius: 10px;
+}
+
+ul{
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
 }

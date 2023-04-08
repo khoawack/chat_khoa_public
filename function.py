@@ -1,7 +1,7 @@
 import openai
 import prompt
 def askGPT(text):
-    openai.api_key = 'YOUR API KEY HERE'
+    openai.api_key = 'Your API Key Here'
     response = openai.Completion.create(
         engine = "text-davinci-003",
         prompt = f"Using this information, pretend you are this person and if you dont know something say I dont know :{prompt.about_me()} to answer this question: {text}?",

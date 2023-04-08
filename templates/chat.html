@@ -5,53 +5,63 @@
         KN Chat Bot
     </title>
     <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 
 <body>
+  <div class="body-container">
+    <div class = "main-container d-flex">
+      <div class="sidebar" id="side_nav">
+          <div class="header-box">
+              <h1 class="title-header">
+                  <span class="robot" id="logo"><i class="bi bi-robot"></i></span>
+                  <span class="chat-title">Khoa Chatbot</span>
+              </h1>   
+          </div>
 
-    <div class="sidebar">
-
-        <a>Khoa Chat Bot</a>
-        <br>
-        <hr>
-        <a href="/new">New Chat + </a>
-        <hr>
-        <!-- <a href="#">Source Code</a>
-        <hr> -->
-        <a href="https://www.khoawack.com">Portfolio</a>
-        <hr>
-        <a href="https://www.linkedin.com/in/khoanguyen07/">Linkedin</a>
-        <hr>
-        <a href="https://github.com/khoawack">Github</a>
-        <hr>
+          <ul class="list-unstyled px-2">
+              <li class = "active" id="new_chat"> 
+                  <a href = "/new" class="new-chat"><i class="bi bi-send-plus-fill"></i> &nbsp;&nbsp;New Chat</a>
+              </li>
+              <li class = "items"> 
+                  <a href = "https://www.khoawack.com" class="text-decoration-none px-3 py-2 d-block "><i class="bi bi-file-earmark-fill"></i> &nbsp;&nbsp;Portfolio</a>
+              </li>
+              <li class = "items"> 
+                  <a href = "https://www.linkedin.com/in/khoanguyen07/" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-linkedin"></i> &nbsp;&nbsp;Linkedin</a>
+              </li>
+              <li class = "items"> 
+                  <a href = "https://github.com/khoawack" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-github"></i> &nbsp;&nbsp;Github</a>
+              </li>
+          </ul>
       </div>
 
-      <div class="chat">
-        <table class="chat">
-          <tbody>
-            {% for messages in message_list %}
-            <tr class="question1">
-              <td>{{ messages.message }}</td>
-              <td><a href='/delete/{{messages.task_id}}'>Delete</a></td>
-            </tr>
-            <tr class="answer1">
-              <td>{{ messages.answer }}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-      <form action="{{url_for('chatting')}}" method="post">
-            <input class="text_input" type ="text" placeholder="Ask something about me" name = "question" required = "required">
-            <input class="button-21" type ="submit" value = ">" id = "test">
-        </form>
+        <div class="chat">
+          <table class="chat">
+            <tbody>
+              {% for messages in message_list %}
+              <tr class="question1">
+                <td class="question-text">{{ messages.message }}</td>
+                <td class="delete-btn"><a href='/delete/{{messages.task_id}}'><i class="bi bi-trash3"></i></a></td>
+              </tr>
+              <tr class="answer1">
+                <td>{{ messages.answer }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
 
-        <div>
-            <p class ="credit">
-                Made By Khoa
-            </p>
         </div>
+        <form action="{{url_for('chatting')}}" method="post">
+              <input class="text_input" type ="text" placeholder="Ask something about me" name = "question" required = "required">
+              <input class="button-21" type ="submit" value = ">" id = "test">
+          </form>
 
+          <div>
+              <p class ="credit">
+                  Made By Khoa
+              </p>
+          </div>
+    </div>
 </body>
 
 </html>
