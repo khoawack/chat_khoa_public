@@ -52,8 +52,11 @@
 
         </div>
         <form action="{{url_for('chatting')}}" method="post">
-              <input class="text_input" type ="text" placeholder="Ask something about me" name = "question" required = "required">
-              <input class="button-21" type ="submit" value = ">" id = "test">
+              <div class = "text-input-bar">
+                <input class="text_input" type ="text" placeholder="Ask something about me" autocomplete="off" name = "question" required = "required">
+                <input class="button-21" type ="submit" value = ">" id = "test">
+              </div>  
+              
           </form>
 
           <div>
