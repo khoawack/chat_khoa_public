@@ -1,3 +1,5 @@
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/arrow-right-r.css');
+
 body {
     display: flex;
     flex-direction: column;
@@ -12,22 +14,7 @@ body {
     padding-left: 20px;
 }
 
-input {
-	position: absolute;
-	bottom: 3%;
-	width: 70vw;
-	height: 5vh;
-}
 
-.text_input {
-	padding-left: 10px;
-	position: absolute;
-	bottom: 7%;
-	left: 35%;
-	width: 50vw;
-	height: 5vh;
-
-}
 
 
 .sidebar {
@@ -80,53 +67,37 @@ input {
 	color: black;
   }
 
-
-
-
-.button-21 {
-	position: absolute;
-	bottom: 7.5%;
-	right: 8%;
-	width: 5vw;
-	height: 5vh;
+.text-input-bar .button-21 {
+  float: right;
+	width: 8.66% ;
+	height: 100%;
   align-items: center;
   appearance: none;
   background-color: #3EB2FD;
   background-size: calc(100% + 20px) calc(100% + 20px);
-  border-radius: 100px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
   border-width: 0;
   box-shadow: none;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: white; 
   cursor: pointer;
   display: inline-flex;
-  font-family: CircularStd,sans-serif;
   font-size: 1rem;
   justify-content: center;
+  font-weight: bold;
   line-height: 1.5;
-  padding: 6px 20px;
   text-align: center;
   text-decoration: none;
-  transition: background-color .2s,background-position .2s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: top;
-  white-space: nowrap;
+  background-image: url('all.svg');
 }
 
-.button-21:active,
-.button-21:focus {
-  outline: none;
+.text-input-bar .button-21:hover{
+  background-color: #3597d9;
 }
 
-.button-21:hover {
-  background-position: -20px -20px;
-}
-
-.button-21:focus:not(:active) {
-  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
-}
 
 .chat {
 	color: white;
@@ -236,3 +207,46 @@ ul{
   padding-inline-start: 10px;
   padding-inline-end: 10px;
 }
+
+.text-input-bar input{
+  background: white;
+  border: none;
+  width: 90%;
+  height: 93.4%;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  outline-width: 0;
+  padding-left: 8px;
+}
+
+.text-input-bar{
+  background-color: transparent;
+  position: absolute;
+	padding-left: 10px;
+  border: none;
+	position: absolute;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+	bottom: 7%;
+	left: 35%;
+	width: 50vw;
+	height: 5vh;
+  padding: 0;
+}
+
+/* input {
+	position: absolute;
+	bottom: 3%;
+	width: 70vw;
+	height: 5vh;
+} */
+
+/* .text_input {
+	padding-left: 10px;
+	position: absolute;
+	bottom: 7%;
+	left: 35%;
+	width: 50vw;
+	height: 5vh;
+
+} */
